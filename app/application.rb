@@ -26,6 +26,10 @@ class Application
     resp.finish
   end
 
+  def handle_add(new_item)
+    @@items.include?(new_item) ? @@cart << new_item : "We don't have that item"
+  end
+
   def handle_search(search_term)
     if @@items.include?(search_term)
       return "#{search_term} is one of our items"
