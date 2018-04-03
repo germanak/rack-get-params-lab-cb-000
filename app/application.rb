@@ -27,10 +27,10 @@ class Application
   end
 
   def handle_add(new_item)
-    if @@items.include?(new_item) 
+    if @@items.include?(new_item)
       @@cart << new_item
-      "added #{new_item}" 
-    else 
+      "added #{new_item}"
+    else
       "We don't have that item"
     end
   end
