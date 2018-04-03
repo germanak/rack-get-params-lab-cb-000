@@ -24,6 +24,9 @@ class Application
       else
         @@cart.each{|cart_item| resp.write "#{cart_item}\n"}
       end
+    elsif req.patch.match(/search/)
+      search_term = req.params["q"]
+      resp.write handle_search(search_term)
     end
 
     resp.finish
